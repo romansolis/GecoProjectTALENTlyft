@@ -17,7 +17,7 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "2",
 				"spark.dynamicAllocation.maxExecutors": "2",
-				"spark.autotune.trackingId": "cc07ace5-3b62-4cd7-820e-00685410a8d6"
+				"spark.autotune.trackingId": "cc941e33-83f2-41b5-b464-dde1bf3e5f49"
 			}
 		},
 		"metadata": {
@@ -64,7 +64,29 @@
 					")\r\n",
 					"display(df.limit(10))"
 				],
-				"execution_count": 1
+				"execution_count": 2
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": false
+				},
+				"source": [
+					"from pyspark.sql.functions import *\r\n",
+					"\r\n",
+					"df=df.withColumn(\"Year\",(df.AppliedOrSourcedDate))\r\n",
+					"display(df.limit(10))"
+				],
+				"execution_count": 13
 			}
 		]
 	}
